@@ -1,0 +1,18 @@
+<h1>
+    Your current location is: <br>
+    lat: {{position.coords.latitude}}<br>
+    lng: {{position.coords.longitude}}<br>
+
+    <ng-container *ngIf="location?.display_name">
+      Your address is : {{location.display_name}}<br>
+      Distance from the company is: {{location.distance}}m
+    </ng-container>
+    
+</h1>
+<button (click)="getDistance()">Get Distance</button>
+
+<div class="map-container">
+  <div class="map-frame">
+    <div id="map"></div>
+  </div>
+</div>
